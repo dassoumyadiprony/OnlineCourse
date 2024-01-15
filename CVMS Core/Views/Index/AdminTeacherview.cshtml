@@ -1,0 +1,341 @@
+﻿
+@{
+    ViewData["Title"] = "AdminTeacherview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .body {
+            font-family: Arial, sans-serif;
+            /* background-color:black;*/
+            /*            background: url("https://images.pexels.com/photos/34239/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                        */ margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .maindiv {
+            background: url("https://wallpaperswide.com/download/light_background-wallpaper-3840x2160.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Use 100vh to ensure the full height of the viewport is covered */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+      
+
+
+        .view {
+            background-color: transparent;
+            /* padding: 50px;*/
+            /* border-radius: 8px;*/
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+            width: 94vw;
+            margin-top: -25%;
+            /* text-align: center;*/
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .form-group button {
+                background-color: cadetblue;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+                .form-group button:hover {
+                    background-color: #4caf50;
+                }
+
+        .switch-form {
+            margin-top: 15px;
+        }
+
+            .switch-form a {
+                text-decoration: none;
+                color: #4caf50;
+                font-weight: bold;
+            }
+        /* body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f4f4f4;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                        }
+
+                        .container {
+                            background-color: #fff;
+                            padding: 20px;
+                            border-radius: 8px;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                            width: 400px;
+                            text-align: center;
+                        }
+
+                        .form-group {
+                            margin-bottom: 20px;
+                            text-align: left;
+                        }
+
+                            .form-group label {
+                                display: block;
+                                margin-bottom: 5px;
+                            }
+
+                            .form-group input {
+                                width: 100%;
+                                padding: 8px;
+                                box-sizing: border-box;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                            }
+
+                            .form-group select {
+                                width: 100%;
+                                padding: 8px;
+                                box-sizing: border-box;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                            }
+
+                            .form-group button {
+                                background-color: #4caf50;
+                                color: #fff;
+                                border: none;
+                                padding: 10px;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                width: 100%;
+                            }
+
+                                .form-group button:hover {
+                                    background-color: #45a049;
+                                }*/
+
+        /* #btn{
+                           float:right;
+                        }*/
+
+
+        #Home {
+            background-color: #1affff;
+            border-radius: 8px;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        #AdminMenupage {
+            background-color: #1affff;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+    </style>
+
+
+    <title>Add Course</title>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: aquamarine; width:100%">
+        @* <a class="navbar-brand" href="#">Online Courses</a>*@
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="Home" style="color:black" href="#">Home <span class="sr-only">(current)</span></a>
+
+                </li>
+                <li>
+                    <a class="nav-link" id="AdminMenupage" style="color:black" href="#">Menupage <span class="sr-only">(current)</span></a>
+                </li>
+                @* <li class="nav-item">
+                <a class="nav-link" id="Admin" href="#">Admin</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="Student" href="#">Student</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="teacher" href="#">Teacher</a>
+                </li>*@
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+
+
+        @*<div class="wraper-main-detail">
+        <div class="container-fluid">
+        <div class="row page-heading-row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="page-heading">Buy section</h1>
+        </div>
+        </div>
+        <div class="shadow-border mb-3 bg-light">
+        <div class="row">
+        <div class="col-4">
+        <div class="form-group">
+        <label class="label-dflt">Country</label>
+        <select class="form-control">
+        <option selected="">Select Country</option>
+        <option>1</option>
+        <option>2</option>
+        </select>
+        </div>
+        </div>
+        <div class="col-4">
+        <div class="form-group">
+        <label class="label-dflt">State</label>
+        <select class="form-control">
+        <option selected="">Select State</option>
+        <option>1</option>
+        <option>2</option>
+        </select>
+        </div>
+        </div>
+        <div class="col-4">
+        <div class="form-group">
+        <label class="label-dflt">City</label>
+        <select class="form-control">
+        <option selected="">Select city</option>
+        <option>1</option>
+        <option>2</option>
+        </select>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>*@
+        <div class="views">
+
+            <div class="view">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="search-strip">
+                                <ul class="search-box d-flex">
+                                    <li class="flex-grow-1"><input type="text" placeholder="search.." id="search" class="form-control"></li>
+                                    <li><button type="button" class="btn btngrey"><i class="fa fa-search" aria-hidden="true"></i></button></li>
+                                </ul>
+
+                            </div>
+
+
+                            <div class="table-responsive">
+                                <table id="usertbl" class="table table-hover master-table table-bordered">
+                                    <thead class="table-light-head">
+                                    <tr>
+                                        <th scope="col">S no.</th>
+                                        <th scope="col">Full Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Date of Birth</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Subject</th>
+                                        <th scope="col">Qualification</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+
+
+                                    <tbody id="mtable">
+                                        @* @*<tr>
+                                        <th scope="row">1</th>
+                                        <td>HIS</td>
+                                        <td>HISTORY</td>
+                                        <td>Five</td>
+                                        <td>SOUMYADIP</td>
+                                        <td>15:00</td>
+                                        <td>20JAN-23JAN</td>
+                                        <td>700</td>
+
+                                        <td>
+
+
+                                        @*<button type="button" class="btn btn-success">Success</button>*@
+                                        @*<button type="button" data-toggle="modal" data-target="#master-toggle" class="btn btn-sm btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>*@
+                                        @* <button type="button" data-toggle="modal" data-target="#master-toggle" class="btn btn-sm btn-info"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                                        <button type="button" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </button>
+                                        </td>
+                                        </tr>*@
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-black text-center p-3 mt-0" style="background-color:aquamarine">
+        <p>&copy; 2023 online Course Education system.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+<script>
+    $('#Home').click(function () {
+        window.location.href = 'https://localhost:7044/Index/Index';
+    });
+    //$('#btn').click(function () {
+    //    window.location.href = 'https://localhost:7044/Index/Addmoreadmin';
+    //});
+    $('#AdminMenupage').click(function () {
+        window.location.href = 'https://localhost:7044/Index/AdminMenuPage';
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/Content/OnlineCourse/TeacherRegistrationgetJavaScript.js"></script>
+
+
+
+
+

@@ -1,0 +1,259 @@
+﻿
+@{
+    ViewData["Title"] = "Addmoreadmin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .maindiv {
+            background: url("https://wallpapers.com/images/hd/light-color-background-0bradaf005gnm8f1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 150vh; /* Use 100vh to ensure the full height of the viewport is covered */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #eeccff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .form-group select {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .form-group button {
+                background-color: #4dffff;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+                .form-group button:hover {
+                    background-color: #45a049;
+                }
+
+        #Home {
+            background-color: #0099cc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        #ViewPage {
+            background-color: #0099cc;
+            border-radius: 8px;
+            padding: 10px;
+            
+        }
+    </style>
+    <title>Add Course</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: aquamarine; width:100%">
+        @* <a class="navbar-brand" href="#">Online Courses</a>*@
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="Home" style="color:#ff4dff" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" id="ViewPage" style="color:#ff4dff" href="#">Viewpage <span class="sr-only">(current)</span></a>
+                </li>
+                @* <li class="nav-item">
+                <a class="nav-link" id="Admin" href="#">Admin</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="Student" href="#">Student</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="teacher" href="#">Teacher</a>
+                </li>*@
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv"> 
+    <div class="container">
+        <h2>Add Course</h2>
+        <form>
+            <div class="form-group">
+                <label for="SUBJECTID">Subject Id:</label>
+                <input type="text" id="subjectid" name="subject" placeholder="Enter your Subject Id" required>
+            </div>
+                <span id="errorMessage"></span>
+
+
+
+                 <div class="form-group">
+                    <label for="Subjectname">Subject Name:</label>
+                    <select id="Subjectname" name="Subjectname" required>
+                        <option value="" selected>Subject</option>
+                        <option value="History">History</option>
+                        <option value="Geography">Geography</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Math">Math</option>
+                        <option value="Computer">Computer</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="other">English</option>
+                    </select>
+                </div>
+                <span id="error"></span>
+
+
+            @*<div class="form-group">
+                <label for="SUBJECTNAME">Subject Name:</label>
+                <input type="text" id="Subjectname" name="subjectname" placeholder="Enter your Subject Name" required>
+            </div>
+                <span id="error"></span>*@
+
+
+                <div class="form-group">
+                    <label for="Standard">Class:</label>
+                    <select id="Standard" name="Standard" required>
+                        <option value="" selected>Class</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <span id="errorr"></span>
+
+
+           @* <div class="form-group">
+                <label for="CLASS">Class:</label>
+                <input type="text" id="Standard" name="Class" placeholder="Enter your Class" required>
+            </div>
+                <span id="errorr"></span>*@
+
+
+            @*<div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            </select>
+            </div>
+            *@
+            <div class="form-group">
+                <label for="Teachername">Teacher Name:</label>
+                <input type="text" id="Teachername" name="Teachername" placeholder="Enter Teacher Name" required>
+            </div>
+                <span id="errorrMessage"></span>
+
+
+            <div class="form-group">
+                <label for="TIME">Time:</label>
+                <input type="time" id="Time" name="Time" placeholder="Enter Time" required>
+            </div>
+                <span id="errorrMessagee"></span>
+
+
+            <div class="form-group">
+                <label for="CourseDuration">Course Duration:</label>
+                <input type="text" id="Courseduration" name="Courseduration" placeholder="Course Duration" required>
+            </div>
+                <span id="errorrMessageeee"></span>
+
+
+            <div class="form-group">
+                <label for="FEES">Fees:</label>
+                <input type="text" id="Fees" name="Fees" placeholder="Fees" required>
+            </div>
+                <span id="Messagee"></span>
+
+
+
+
+
+
+            <div class="form-group">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-black text-center p-3 mt-0" style="background-color:aquamarine">
+        <p>&copy; 2023 online Course Education system.</p>
+    </footer>
+    @*--------------------------------------------------------------------------------------------------*@
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
+<script>
+ $('#Home').click(function () {
+        window.location.href = 'https://localhost:7044/Index/Index';
+    });
+    $('#ViewPage').click(function () {
+        window.location.href = 'https://localhost:7044/Index/AdminAddmore#';
+    });
+    </script>
+<script src="~/Content/OnlineCourse/AddmoreonlinecourseJavaScript.js"></script>
+

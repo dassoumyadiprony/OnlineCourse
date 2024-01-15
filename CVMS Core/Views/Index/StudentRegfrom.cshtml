@@ -1,0 +1,252 @@
+﻿
+@{
+    ViewData["Title"] = "StudentRegfrom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .maindiv {
+            background: url("https://wallpapers.com/images/featured/light-color-s0s3phxvwu24nnza.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 150vh; /* Use 100vh to ensure the full height of the viewport is covered */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #ffff80;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .form-group select {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .form-group button {
+                background-color: #cc66ff;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+                .form-group button:hover {
+                    background-color: #45a049;
+                }
+
+
+
+
+
+        #Home {
+            background-color: #ff99ff;
+            border-radius: 8px;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        #StudentMenupage {
+            background-color: #ff99ff;
+            border-radius: 8px;
+            padding: 10px;
+        }
+    </style>
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: aquamarine; width:100%">
+        @* <a class="navbar-brand" href="#">Online Courses</a>*@
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="Home" style="color:black" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" id="StudentMenupage" style="color:black" href="#">Viewpage <span class="sr-only">(current)</span></a>
+                </li>
+                @* <li class="nav-item">
+                <a class="nav-link" id="Admin" href="#">Admin</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="Student" href="#">Student</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="teacher" href="#">Teacher</a>
+                </li>*@
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <div class="container">
+            <h2><b>Student Registration Form</b></h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="Fullname" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div id="errorMessage"></div>
+
+
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="Email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div id="error"></div>
+
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="Dateofbirth" name="dob" required>
+                </div>
+                <div id="errorr"></div>
+
+
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="Gender" name="gender" required>
+                        <option value="" selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div id="errorrMessage"></div>
+
+
+                <div class="form-group">
+                    <label for="Subject">Subject:</label>
+                    <select id="Subject" name="Subject" required>
+                        <option value="" selected>Subject</option>
+                        <option value="History">History</option>
+                        <option value="Geography">Geography</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Math">Math</option>
+                        <option value="Computer">Computer</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="other">English</option>
+                    </select>
+                </div>
+                <div id="errorrMessagee"></div>
+
+
+              @*  <div class="form-group">
+                    <label for="course">Subject:</label>
+                    <input type="text" id="Subject" name="course" placeholder="Enter your course" required>
+                </div>*@
+
+
+
+                <div class="form-group">
+                    <label for="Standard">Class:</label>
+                    <select id="Standard" name="Standard" required>
+                        <option value="" selected>Class</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div id="errorrMesssage"></div>
+
+
+
+               @* <div class="form-group">
+                    <label for="Class">Class:</label>
+                    <input type="text" id="Standard" name="Class" placeholder="Enter your Class" required>
+                </div>*@
+
+
+
+                <div class="form-group">
+                    <button id="submit" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-black text-center p-3 mt-0" style="background-color:aquamarine">
+        <p>&copy; 2023 online Course Education system.</p>
+    </footer>
+    @*--------------------------------------------------------------------------------------------------*@
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+
+
+</body>
+</html>
+<script>
+    $('#Home').click(function () {
+        window.location.href = 'https://localhost:7044/Index/Index';
+    });
+    $('#StudentMenupage').click(function () {
+        window.location.href = 'https://localhost:7044/Index/StudentMenuPage';
+    });
+</script>
+<script src="~/Content/OnlineCourse/StudentRegJavaScript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+   

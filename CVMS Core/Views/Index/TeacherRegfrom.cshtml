@@ -1,0 +1,236 @@
+﻿
+@{
+    ViewData["Title"] = "TeacherRegfrom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .maindiv {
+            background: url("https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGlnaHQlMjBjb2xvdXJ8ZW58MHx8MHx8fDA%3D");
+            background-size: cover;
+            background-position: center;
+            height: 150vh; /* Use 100vh to ensure the full height of the viewport is covered */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #99ffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .form-group select {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .form-group button {
+                background-color: #ff99ff;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+                .form-group button:hover {
+                    background-color: #45a049;
+                }
+
+        #Home {
+            background-color: #ff99ff;
+            border-radius: 8px;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        #TeacherMenupage {
+            background-color: #ff99ff;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+
+
+    </style>
+    <title>Add Course</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: aquamarine; width:100%">
+        @* <a class="navbar-brand" href="#">Online Courses</a>*@
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="Home" style="color:black" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" id="TeacherMenupage" style="color:black" href="#">Viewpage <span class="sr-only">(current)</span></a>
+                </li>
+                @* <li class="nav-item">
+                <a class="nav-link" id="Admin" href="#">Admin</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="Student" href="#">Student</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="teacher" href="#">Teacher</a>
+                </li>*@
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <div class="container">
+            <h2><b>Teacher Registration Form</b></h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="Fullname" name="name" placeholder="Enter your full name" required>
+                </div>
+                <span id="errorMessage"></span>
+
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="Email" name="email" placeholder="Enter your email" required>
+                </div>
+                <span id="error"></span>
+
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="Dateofbirth" name="dob" required>
+                </div>
+                <span id="errorr"></span>
+
+
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="Gender" name="gender" placeholder=required>
+                        <option value="" selected>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <span id="errorrMessage"></span>
+
+
+                @*<div class="form-group">
+                    <label for="Subjact">Subject:</label>
+                    <input type="text" id="Subject" name="Subject" placeholder="Enter your Subject" required>
+                </div>*@
+
+                <div class="form-group">
+                    <label for="Subject">Subject:</label>
+                    <select id="Subject" name="Subject" required>
+                        <option value="" selected>Subject</option>
+                        <option value="History">History</option>
+                        <option value="Geography">Geography</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Math">Math</option>
+                        <option value="Computer">Computer</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="other">English</option>
+                    </select>
+                </div>
+                <span id="errorrMessagee"></span>
+
+
+
+                <div class="form-group">
+                    <label for="Qualification">Qualification:</label>
+                    <input type="text" id="Qualification" name="Qualification" placeholder="Enter your Qualification" required>
+                </div>
+                <span id="errorrMessageeee"></span>
+
+
+                <div class="form-group">
+                    <label for="TIME">Time:</label>
+                    <input type="time" id="Time" name="Time" placeholder="Time" required>
+                </div>
+                <span id="Messagee"></span>
+
+
+
+
+                <div class="form-group">
+                    <button id="submit" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-black text-center p-3 mt-0" style="background-color:aquamarine">
+        <p>&copy; 2023 online Course Education system.</p>
+    </footer>
+    @*----------------------------------------------------------------------------------------------------------------------*@
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
+<script>
+    $('#Home').click(function () {
+        window.location.href = 'https://localhost:7044/Index/Index';
+    });
+    $('#TeacherMenupage').click(function () {
+        window.location.href = 'https://localhost:7044/Index/TeacherMenuPage';
+    });
+</script>
+@*<script src="~/Content/OnlineCourse/TeacherRegistrationJavaScript.js">
+*@
+<script src="~/Content/OnlineCourse/TeacherRegistrationJavaScript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>

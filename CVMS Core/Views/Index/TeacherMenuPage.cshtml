@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "TeacherMenuPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Menus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+            nav a {
+                display: inline-block;
+                padding: 10px;
+                text-decoration: none;
+                color: #333;
+                margin: 0 10px;
+                font-weight: bold;
+            }
+
+        section {
+            padding: 20px;
+        }
+
+
+
+        #Logout {
+            float: right
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome Teacher Page</h1>
+    </header>
+
+    <nav>
+        <h3>Welcome  <span id="cuname">@ViewBag.LoggedInName</span></h3>
+
+        <a href="https://localhost:7044/Index/Index">Home</a>
+        <a id="" href="https://localhost:7044/Index/TeacherRegfrom"> Teacher Registration From</a>
+        <a href="https://localhost:7044/Index/CourseDetails">Course Details</a>
+        <a id="Logout" href="https://localhost:7044/Index/AdminLog">Logout</a>
+       
+        @*<a href="Add more">Add More</a>*@
+    </nav>
+    <div class="background-image">
+        <img src="~/Content/Image/image6.jpg" style="width: 100%; height:20%">
+     </div>
+</body>
+</html>
+
