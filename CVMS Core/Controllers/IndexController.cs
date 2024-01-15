@@ -638,7 +638,7 @@ namespace CVMS_Core.Controllers
             return View();
         }
         //-------------------------------------------------------------logout--------------------------------------------
-        public IActionResult asdfghj()
+        public IActionResult asdfgh()
         {
             return View();
         }
