@@ -638,6 +638,9 @@ namespace CVMS_Core.Controllers
             return View();
         }
         //-------------------------------------------------------------logout--------------------------------------------
-       
+        public IActionResult Addmo()
+        {
+            return View();
+        }
     }
 }
